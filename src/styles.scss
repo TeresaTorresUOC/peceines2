@@ -377,7 +377,7 @@ section p {
 
 .category-title {
     font-size: 1.5rem;
-    color: #333;
+    color:black;
     margin-bottom: 10px;
 }
 .category figure {
@@ -462,35 +462,112 @@ section p {
     outline: none;
 }
 /*detall*/
+/* Estil per a la secció de detall */
+.section-sections {
+    text-align: justify;
+    padding: 10px;
+    max-width: 900px;
+    margin: 20px auto;
+}
 
+/* Estil per al títol */
 .detall-title {
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
     color: rgb(123, 26, 26);
+    padding: 20px;
 }
 
+/* Estil per al text descriptiu general */
 .detall-description {
     font-size: 1rem;
-    color: #555;
+    color: black;
     margin-bottom: 15px;
+    padding: 20px;
 }
 
-.detall-image {
-    text-align: center;
+/* Contenidor per al text i la imatge */
+.detall-content {
+    display: flex;
+    flex-wrap: wrap; /* Permet que el contingut s'ajusti en pantalles més petites */
+    justify-content: space-between; /* Coloca els elements als extrems */
+    gap: 20px; /* Espai entre el text i la imatge */
+    margin: 20px auto;
 }
-
-.image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    max-height: 400px;
+.detall-content img {
+    width: 100%; 
+    height: 100%; 
     object-fit: cover;
+    
+    
+}
+/* Estil per al text a l'esquerra */
+.detall-description-img {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6; /* Augmenta l'espai entre línies per millorar la llegibilitat */
+    flex: 1; /* Permet que el text ocupi tot l'espai disponible */
+    padding-left: 20px;
+    max-width: 900px;
+    margin: 5px auto;
+}
+.detall-image{
+    flex-basis: 40%; /* Estableix l'ample de la imatge com el 40% del contenidor */
+    max-width: 40%; /* Màxima amplada de la imatge */
+    margin-top: 30px; /* Marge superior per separar la imatge del text */
+
 }
 
-.image-caption {
-    font-size: 0.9rem;
-    color: #888;
+/* Estil per als subtítols */
+.detall-subtitle {
+    text-align: center;
+    padding: 10px;
 }
+
+/* Estils per a la figura i la imatge */
+.detall-content figure {
+    position: relative; 
+    margin: 0; 
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
+}
+
+
+
+/* Estil per al peu de foto (figcaption) */
+.detall-content figcaption {
+    font-size: 0.9rem; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    position: absolute;
+    bottom: 5%; 
+    left:  35%; 
+    width: auto; 
+    max-width: 60%; 
+    padding: 8px 9px; 
+    text-align: left; 
+    color: rgb(0, 0, 0); 
+    z-index: 1;
+    white-space: nowrap;
+    display: inline-block; 
+    margin-left: 30%;
+}
+
+/* Estil per als enllaços dins del figcaption */
+.detall-content figcaption a {
+    text-decoration: none;
+    color: black; /* Color negre per al text dels enllaços */
+}
+
+.detall-content figcaption a:hover {
+    color: rgb(123, 26, 26); /* Canviem el color en passar el ratolí per sobre */
+}
+
+
+
+
+
 .experience-form {
     max-width: 800px;
     margin: 0 auto;
@@ -498,6 +575,25 @@ section p {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px; 
 }
 
 .form-label {
