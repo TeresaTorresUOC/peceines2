@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ComidaAsiatica">
+    <link rel="apple-touch-icon" href="../assets/img/logo comida Asiatica.png">
+    <link rel="icon" href="../assets/img/logo comida Asiatica.png" type="image/png">
+    <link rel="stylesheet" href="./styles.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>cunina assiàtica</title>
+</head>
+    <body>
+        <header>
+            <a href="./index.html" class="header-link"> 
+                <div class="logo">
+                    <img src="../assets/img/logo comida Asiatica.png" alt="Logo comida asiatica" class="logo">
+                </div>
+             <h1 class="title">
+                <span class="main-title">Asian Food</span>
+                <span class="sub-title">Blog</span>
+             </h1>
+            </a>
+    
+            <nav class="menu">
+                <ul>
+                    <li><a href="./categories.html">Categoria</a></li>
+                    <li><a href="./detall.html" class="raya">Detall</a></li>
+                    <li><a href="./enllaços.html" class="raya">Enllaços</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container-i"> 
+            
+            <section id="xines" class="section-xines">
+                <h2 class="detall-title">Menjar Xinès</h2>
+                <p class="detall-description">La cuina xinesa és una de les més antigues i variades del món. Plats com el "Pato Pekín", "Dumplings" i el famós "Arroz Frito" són només algunes de les delícies que pots provar.</p>
+                <figure class="detall-image">
+                    <img src="ruta-imagen-xinesa.jpg" alt="Plats típics de la cuina xinesa" class="image">
+                    <figcaption class="image-caption">Imatge de Freepik</figcaption>
+                </figure>
+            </section>
+    
+            <!-- Secció Menjar Japonès -->
+            <section id="japones" class="section-japones">
+                <h2 class="detall-title">Menjar Japonès</h2>
+                <p class="detall-description">La cuina japonesa destaca pel seu equilibri, frescor i presentació. Plats com el sushi, ramen i tempura són coneguts mundialment.</p>
+                <figure class="detall-image">
+                    <img src="ruta-imagen-japonesa.jpg" alt="Plats típics de la cuina japonesa" class="image">
+                    <figcaption class="image-caption">Imatge de Freepik</figcaption>
+                </figure>
+            </section>
+    
+            <!-- Secció Menjar Coreà -->
+            <section id="corea" class="section-corea">
+                <h2 class="detall-title">Menjar Coreà</h2>
+                <p class="detall-description">La cuina coreana és coneguda per la seva intensitat de sabors i els seus plats com el "Bibimbap", el "Kimchi" i el "Bulgogi".</p>
+                <figure class="detall-image">
+                    <img src="ruta-imagen-coreana.jpg" alt="Plats típics de la cuina coreana" class="image">
+                    <figcaption class="image-caption">Imatge de Freepik</figcaption>
+                </figure>
+            </section>
+    
+            <!-- Secció Menjar Tailandès -->
+            <section id="tailandes" class="section-tailandes">
+                <h2 class="detall-title">Menjar Tailandès</h2>
+                <p class="detall-description">La cuina tailandesa combina dolç, salat, picant i àcid en un sol plat. Plats com el "Pad Thai", "Tom Yum" i "Green Curry" són especialitats tradicionals.</p>
+                <figure class="detall-image">
+                    <img src="ruta-imagen-tailandesa.jpg" alt="Plats típics de la cuina tailandesa" class="image">
+                    <figcaption class="image-caption">Imatge de Freepik</figcaption>
+                </figure>
+            </section>
+    
+            <!-- Formulari per compartir l'experiència -->
+            <section id="formulari" class="section-formulari">
+                <h2 class="form-title">Comparteix la teva Experiència Gastronòmica</h2>
+                <p class="form-description">Ens encantaria saber quines han estat les teves experiències gastronòmiques a Àsia! Comparteix-les amb nosaltres pujant una imatge, un vídeo i una descripció.</p>
+                
+                <form id="experience-form" class="experience-form">
+                    <label for="nom" class="form-label">El teu nom:</label>
+                    <input type="text" id="nom" name="nom" required class="form-input">
+            
+                    <label for="email" class="form-label">El teu correu electrònic:</label>
+                    <input type="email" id="email" name="email" required class="form-input">
+            
+                    <label for="experiencia" class="form-label">Descripció de la teva experiència:</label>
+                    <textarea id="experiencia" name="experiencia" rows="4" required class="form-textarea"></textarea>
+            
+                    <label for="image" class="form-label">Imatge de l'experiència:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required class="form-input">
+            
+                    <label for="video" class="form-label">Video de l'experiència:</label>
+                    <input type="file" id="video" name="video" accept="video/*" class="form-input">
+            
+                    <button type="submit" class="form-button">Enviar experiència</button>
+                </form>
+                
+                <p id="form-message" class="form-message"></p>
+            </section>
+            
+    
+            
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-top">
+                
+                <div class="footer-left">
+                    <div class="logo-decorativo"></div>
+                    <p class="footer-name">2024-2025. Teresa Torres Torres UOC Eines HTML i CSS</p>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-logos">
+                        <a href="" class="logo">
+                            <img src="./img/instagram.svg" alt="Logo de Instagram">
+                        </a>
+                        <a href="" class="logo">
+                            <img src="./img/youtube.svg" alt="Logo de YouTube">
+                        </a>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de <span class="italica">cookies</span></a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    
+</body>
+</html>

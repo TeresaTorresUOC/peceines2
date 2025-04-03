@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding-top: 70px; 
+    font-family: "Alegreya Sans", serif;
+    background-color: #eaeaea;;
+}
+
+html, body {
+    margin: 0; 
+    padding: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow-x: hidden; 
+    font-family: "Alegreya Sans", serif;
+    background-color: rgb(255, 255, 255); 
+}
+
+
+main {
+    min-height: calc(100vh - 70px);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+}
+/*header*/
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    color: beige;
+    margin-bottom: 0;
+  }
+  .header-link {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    color: inherit; 
+}
+  
+  .logo {
+    img {
+      height: 100px;
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+    .header-link:hover .logo img {
+    transform: scale(1.1); 
+    }
+  
+  .title {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Familjen Grotesk', sans-serif;
+    margin-right: 45%;
+  }
+  
+  .main-title {
+    color: rgb(123, 26, 26);
+    margin: 0;
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+  
+  .sub-title {
+    color: beige;
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .menu {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 20px;
+      margin-left: 250px;
+  
+      li {
+        margin-left: 30px;
+  
+        a {
+          text-decoration: none;
+          color: beige;
+          font-weight: bold;
+  
+          &:hover {
+            color: rgb(123, 26, 26);
+          }
+        }
+      }
+    }
+  }
+
+.hero{
+    margin-top: 0;
+    padding: 0;
+    height: 60vh; 
+    width: 100%; 
+    object-fit: cover;
+    background-image: url(../assets/img/menjarasiatic.jpg);
+    background-position: center top; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: rgb(242, 242, 230); 
+    position: relative; 
+    text-align: center;
+    top:0;
+}
+
+.contenedor-i-textos{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(123, 26, 26);
+}
+
+
+.hero h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 45px;
+    font-weight: 400;
+    color: beige;
+}
+.hero figure {
+    position: absolute; 
+    bottom: 5%; 
+    left: 85%; 
+    transform: translateX(-50%); 
+    color:beige;
+    white-space: nowrap;
+    padding: 5px 10px; 
+    font-size: 0.9em; 
+    text-align: left;
+    max-width: 90%; 
+    z-index: 1; 
+
+}
+
+.hero figure a {
+  color: beige;
+  text-decoration: none;
+  
+}
+
+.hero figure a:hover {
+    color: rgb(123, 26, 26);
+  }
+/* Main index*/
+.container-i {
+    background-color:#eaeaea;;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    min-height: 100vh; 
+}
+.bloggers-container{
+    
+    gap: 40px; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 20px;
+    width: 70%;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+section p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+/* bloggers */
+.blogger {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+/* Estilo de las tarjetas */
+.blog {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 20px; 
+    flex: 1 1 calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.blog h3 {
+    font-size: 1.4rem;
+    margin-bottom: auto;
+    color: rgb(0, 0, 0);
+    align-items: center
+    
+}
+
+.blog p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+}
+
+.blog a {
+    display: inline-block;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+    background-color: transparent;
+    transition:  0.3s, color 0.3s;
+    margin: 10px auto 0;
+    width: auto;
+    margin-top: auto; 
+    text-align: left;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.blog a:hover {
+    border: 1px solid rgb(123, 26, 26);
+    color: rgb(123, 26, 26);
+}
+
+.blogger-img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte de manera correcta */
+    margin-right: 20px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*footer*/
+.footer {
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    padding: 20px 40px; 
+}
+
+
+.footer-top {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+
+.footer-left {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.logo-decorativo {
+    background-image: url("../img/logotip-n.svg"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px; 
+    height: 30px;
+    margin-bottom: 4px; 
+}
+
+.footer-name {
+    font-size: 12px;
+    white-space: nowrap;
+    color:rgb(255, 255, 255); 
+}
+
+
+.footer-right {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 10px; 
+}
+
+
+.footer-logos {
+    display: flex; 
+    gap: 15px; 
+}
+
+.footer-logos img {
+    width: 20px; 
+    height: auto;
+    cursor: pointer; 
+}
+
+.footer-logos img:hover {
+    opacity: 0.7
+}
+
+
+.footer-links {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+.footer-links li{
+    position: relative;
+    display: inline-block;
+}
+
+.footer-links li a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+    font-size: 12px; 
+    padding: 5px 10px;
+    display: inline-block; 
+}
+
+.footer-links li:not(:last-child)::after {
+    content: "|"; 
+    font-size: 12px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    right: -12px;
+}
+
+.footer-links li a:hover {
+    text-decoration: none;
+    color: rgb(64, 195, 130);
+}
