@@ -81,7 +81,12 @@ header {
   }
   
   .menu {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
     ul {
+        
       list-style: none;
       padding: 0;
       margin: 0;
@@ -105,7 +110,7 @@ header {
       }
     }
   }
-
+/*index*/
 .hero{
     margin-top: 0;
     padding: 0;
@@ -129,6 +134,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 40px;
     color: rgb(123, 26, 26);
 }
 
@@ -239,19 +245,29 @@ header {
 
 /* Botó de subscripció */
 .newsletter-form button {
-    background-color: rgb(123, 26, 26);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
+    background: transparent;
+    border: 2px solid rgb(123, 26, 26);
+    color: rgb(123, 26, 26);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family:"Alegreya Sans", serif; ;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+    width: auto;
 }
 
 .newsletter-form button:hover {
-    background-color: rgb(123,26,26);
+    background-color: rgb(123, 26, 26);
+    color: white;
 }
+.newsletter-form button:focus{
+
+    outline: none;
+}
+
 /* Main index*/
 .container-i {
     background-color:#eaeaea;;
@@ -362,6 +378,13 @@ section p {
     align-items: center;
 
 }
+.category-title a{
+    color: black;
+    text-decoration: none;
+}
+.category-title a:hover{
+    color:rgb(123, 26, 26)
+}
 
 .categories {
     display: grid;
@@ -437,20 +460,6 @@ section p {
     display: inline-block;
     width: auto;
 
-.show-more-btn {
-    background: transparent;
-    border: 2px solid rgb(123, 26, 26);
-    color: rgb(123, 26, 26);
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-family:"Alegreya Sans", serif; ;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-    margin-top: 20px;
-
-}
-
 }
 
 .show-more-btn:hover {
@@ -462,7 +471,10 @@ section p {
     outline: none;
 }
 /*detall*/
-/* Estil per a la secció de detall */
+br{
+    line-height: 1.6;
+
+}
 .section-sections {
     text-align: justify;
     padding: 10px;
@@ -483,8 +495,9 @@ section p {
 .detall-description {
     font-size: 1rem;
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding: 20px;
+    line-height: 1.6;
 }
 
 /* Contenidor per al text i la imatge */
@@ -505,7 +518,6 @@ section p {
 /* Estil per al text a l'esquerra */
 .detall-description-img {
     font-size: 1rem;
-    color: #555;
     line-height: 1.6; /* Augmenta l'espai entre línies per millorar la llegibilitat */
     flex: 1; /* Permet que el text ocupi tot l'espai disponible */
     padding-left: 20px;
@@ -521,8 +533,10 @@ section p {
 
 /* Estil per als subtítols */
 .detall-subtitle {
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 
 /* Estils per a la figura i la imatge */
@@ -533,8 +547,6 @@ section p {
     height: 200px;
     overflow: hidden; 
 }
-
-
 
 /* Estil per al peu de foto (figcaption) */
 .detall-content figcaption {
@@ -566,17 +578,6 @@ section p {
 
 
 
-
-
-.experience-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .video-wrapper {
     position: relative;
     width: 100%; 
@@ -595,7 +596,31 @@ section p {
     height: 100%;
     border-radius: 5px; 
 }
+.experience-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-detall{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(123, 26, 26);
+    padding: 20px;
 
+}
+.form-des-detall{
+
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 5px;
+    padding: 20px;
+    line-height: 1.6;
+
+}
 .form-label {
     display: block;
     font-size: 1rem;
@@ -611,25 +636,33 @@ section p {
 }
 
 .form-button {
-    background-color: rgb(123, 26, 26);
-    color: white;
+    background: transparent;
+    border: 2px solid rgb(123, 26, 26);
+    color: rgb(123, 26, 26);
     padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    font-size: 1.2rem;
+    font-family:"Alegreya Sans", serif; ;
     border-radius: 5px;
-    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+    width: auto;
 }
 
 .form-button:hover {
-    background-color: rgb(64, 195, 130);
+    background-color: rgb(123, 26, 26);
+    color: white;
 }
 
-
+.form-button:focus {
+    outline: none;
+}
 
 /*footer*/
 .footer {
     background-color: rgb(0, 0, 0); 
-    color: rgb(255, 255, 255); 
+    color: beige; 
     padding: 20px 40px; 
 }
 
@@ -648,7 +681,6 @@ section p {
 }
 
 .logo-decorativo {
-    background-image: url("../img/logotip-n.svg"); 
     background-size: contain;
     background-repeat: no-repeat;
     width: 100px; 
@@ -720,5 +752,147 @@ section p {
 
 .footer-links li a:hover {
     text-decoration: none;
-    color: rgb(64, 195, 130);
+    color: rgb(123, 26, 26);
+}
+/* Estilos generales */
+body {
+    font-size: 16px; /* Base font size */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .menu ul {
+        margin-left: 50px; /* Reduce el margen en pantallas más pequeñas */
+    }
+   
+}
+
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;  /* Posar elements en columna */
+        align-items: center;     /* Centra els elements */
+        background-color: black;
+        padding: 20px;
+        color: beige;
+        text-align: center;      /* Centrar text */
+        width: 100%;
+      }
+       
+        .header-link {
+            
+            padding-left: 50px;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+        }
+        .logo img {
+            height: 80px;
+            width: 80px;
+          }
+      
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10px;
+          position: relative;
+          z-index: 10;
+          
+        }
+        .menu ul{
+            flex-direction: column;
+            margin-left: 0;
+        }
+      
+        .menu ul li {
+          margin: 5px 0;
+        }
+    
+        .categories {
+            grid-template-columns: repeat(1, 1fr); 
+        } 
+
+    .hero h1 {
+        font-size: 40px; 
+    }
+
+    .hero p {
+        font-size: 30px; 
+    }
+
+    .newsletter-form input {
+        width: 90%; 
+    }
+
+    .blog {
+        flex: 1 1 100%; 
+    }
+
+    .detall-content {
+        flex-direction: column; 
+    }
+   
+    
+    .detall-image {
+        max-width: 100%; 
+    }
+    .terms {
+        white-space: nowrap; 
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .footer-left {
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .footer-right {
+        align-items: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer-logos img {
+        width: 20px; 
+        height: auto;
+        cursor: pointer; 
+    }
+    
+    
+    .footer-links li:not(:last-child)::after {
+        content: "";
+    }
+    
+    .footer-links li a {
+        font-size: 14px;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .newsletter h2 {
+        font-size: 1.5rem; 
+    }
+
+    .newsletter h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-links {
+        flex-direction: column; 
+    }
+
+    .footer-links li {
+        margin-bottom: 5px; 
+    }
 }
