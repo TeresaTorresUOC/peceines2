@@ -119,6 +119,7 @@ header {
   position: relative;
   text-align: center;
   top: 0;
+  overflow: hidden;
 }
 
 .contenedor-i-textos {
@@ -130,10 +131,13 @@ header {
   justify-content: center;
   font-size: 40px;
   color: rgb(123, 26, 26);
+  position: relative;
+  z-index:2;
+  margin-top: 40px;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -142,33 +146,53 @@ header {
   font-size: 45px;
   font-weight: 400;
   color: beige;
+  margin-top: 25px;
+  
 }
 
-.hero figure {
-  position: absolute;
-  bottom: 5%;
-  left: 85%;
-  transform: translateX(-50%);
-  color: beige;
-  white-space: nowrap;
-  padding: 5px 10px;
-  font-size: 0.9em;
-  text-align: left;
-  max-width: 90%;
-  z-index: 1;
-}
 
+.hero figure{
+font-size: 0.9rem;
+background-color: rgba(255, 255, 255, 0.7);
+position: absolute;
+bottom: 5%;
+left: 50%;
+width: auto;
+max-width: 60%;
+padding: 8px 9px;
+text-align: left;
+color: rgb(0, 0, 0);
+z-index: 1;
+white-space: nowrap;
+display: inline-block;
+margin-left: 30%;
+}
 .hero figure a {
-  color: beige;
   text-decoration: none;
+  color: black;
 }
-
 .hero figure a:hover {
   color: rgb(123, 26, 26);
 }
 
+.clip-path-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  aspect-ratio: 2 / 1;
+  background-image: url(../assets/img/ingreditens.jpg);
+  clip-path: polygon(100% 0,0 0, 100% 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
 /* Secció de subscripció */
 .newsletter {
+  max-width: 600px;
   text-align: center;
   padding: 30px 30px;
   max-width: 600px;
@@ -258,6 +282,76 @@ header {
 .newsletter-form button:focus {
   outline: none;
 }
+.decoracio-svg {
+  display: flex;
+  flex: 1;
+  
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.contenidor-svg {
+  animation: flotacio 3s ease-in-out infinite;
+}
+
+@keyframes flotacio {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animació de palillos */
+.palillo1 {
+  animation: palillo-dreta 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.palillo2 {
+  animation: palillo-esquerra 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes palillo-dreta {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes palillo-esquerra {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.bloc-newsletter-svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+}
+
 
 /* Main index*/
 .container-i {
@@ -458,6 +552,20 @@ section p {
 }
 
 /*detall*/
+.imatge-destacada {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.imatge-destacada img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 br {
   line-height: 1.6;
 }
@@ -517,6 +625,8 @@ br {
   max-width: 40%;
   margin-top: 30px;
 }
+
+
 
 /* Estil per als subtítols */
 .detall-subtitle {
@@ -583,14 +693,15 @@ br {
 }
 
 .experience-form {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
+.section-formulari{
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
 .form-detall {
   text-align: center;
   font-size: 2rem;
@@ -602,8 +713,7 @@ br {
 .form-des-detall {
   font-size: 1rem;
   color: black;
-  margin-bottom: 5px;
-  padding: 20px;
+  margin-bottom: 20px;
   line-height: 1.6;
 }
 
@@ -644,6 +754,7 @@ br {
 .form-button:focus {
   outline: none;
 }
+
 
 /*footer*/
 .footer {
@@ -777,6 +888,7 @@ br {
   .menu ul li {
     margin: 5px 0;
   }
+  
   .categories {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -794,9 +906,18 @@ br {
   }
   .detall-content {
     flex-direction: column;
+    align-items: center;
   }
   .detall-image {
     max-width: 100%;
+  }
+  .detall-content img {
+    max-width: 100%;
+  }
+  .video-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
   .terms {
     white-space: nowrap;
@@ -844,6 +965,36 @@ br {
   .footer-links li {
     margin-bottom: 5px;
   }
+ 
 }
+@media (min-width: 1024px) {
+  .bloc-newsletter-svg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-/*# sourceMappingURL=styles.css.map */
+  .newsletter {
+    flex: 1;
+    margin: 0;
+    text-align: left;
+    padding: 30px;
+  }
+
+  .decoracio-svg {
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .contenidor-svg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+  }
+}
