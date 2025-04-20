@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ComidaAsiatica">
-    <link rel="apple-touch-icon" href="../assets/img/logo_comida_Asiatica.png">
-    <link rel="icon" href="../assets/img/logo_comida_Asiatica.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/img/favicon.png">
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
         <header>
             <a href="../index.html" class="header-link"> 
                 <div class="logo">
-                    <img src="../assets/img/logo_comida_Asiatica.png" alt="Logo comida asiatica" class="logo">
+                    <img src="../assets/img/redimensionades/logo_comida_Asiatica.png" alt="Logo comida asiatica" class="logo">
                 </div>
              <h1 class="title">
                 <span class="main-title">Asian Food</span>
@@ -36,17 +36,26 @@
         <main class="container-i"> 
             <picture class="imatge-destacada">
                 <source 
+                    srcset="
+                             ../assets/img/street_food2-sm.jpg 480w,
+                            ../assets/img/street_food2-md.jpg 768w,
+                            ../assets/img/street_food2-xl.jpg 1200w
+                                                                    "
+                    type="image/jpeg"
+                    sizes="(max-width: 768px) 100vw, 50vw">
+                <source 
                   srcset="
-                    ../assets/img/street_food2-sm 480w,
-                    ../assets/img/street_food2-md.jpg 768w,
-                    ../assets/img/street_food2-xl.jpg 1200w
+                    ../assets/img/street_food2-sm.webp 480w,
+                    ../assets/img/street_food2-md.webp 768w,
+                    ../assets/img/street_food2-xl.webp 1200w
                   "
                   sizes="(max-width: 768px) 100vw, 50vw">
                   
                 <img 
-                  src="../assets/img/street_food2-xl.jpg" 
+                  src="../assets/img/redimensionades/street_food2-xl.webp" 
                   alt="Parada de menjar al carrer" 
-                  class="imatge-destacada">
+                  class="imatge-destacada"
+                  loading="lazy">
               </picture>
                 
             <section id="xines" class="section-sections">
@@ -68,7 +77,7 @@
                         <strong>Cuina de Fujian</strong>, gran ús del marisc i sopes saboroses.
                     </p>
                     <figure class="detall-image">
-                        <img src="../assets/img/Hot_pot.jpg" alt="Hot pot xinès" class="image">
+                        <img src="../assets/img/redimensionades/Hot_pot.jpg" alt="Hot pot xinès" class="image">
                         <figcaption class="image-caption">Imatge de Freepik</figcaption>
                     </figure>
                 </div>
@@ -107,7 +116,7 @@
                     les botigues de ramen i sushi són omnipresents, i cada plat és una mostra de la precisió i la passió amb què es prepara cada àpat. Un bon exemple és el famós sushi, 
                     però no només el de Tòquio: a cada regió del país, el sushi adquireix un toc distintiu.</p>
                     <figure class="detall-image">
-                        <img src="../assets/img/Tataki.jpg" alt="Tataki" class="image">
+                        <img src="../assets/img/redimensionades/Tataki.jpg" alt="Tataki" class="image">
                         <figcaption class="image-caption">Imatge de Freepik</figcaption>
                 </figure>
                 </div> 
@@ -192,7 +201,7 @@
                 <br><strong>Sai Ua:</strong>  una salsitxa picant típica del nord de Tailàndia, feta amb herbes aromàtiques i xili.
                 <br><strong>Mango Sticky Rice:</strong> postre tradicional fet amb arròs enganxós, llet de coco i mango madur.</p>
                 <figure class="detall-image">
-                    <img src="../assets/img/tailandiaFood.jpg" alt="khao man gai" class="image">
+                    <img src="../assets/img/redimensionades/tailandiaFood.jpg" alt="khao man gai" class="image">
                     <figcaption class="image-caption">Imatge de Freepik</figcaption>
                      </figure>
             </div>
