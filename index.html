@@ -17,7 +17,18 @@
         <header>
             <a href="./index.html" class="header-link"> 
                 <div class="logo">
-                    <img src="./assets/img/redimensionades/logo_comida_Asiatica.png" alt="Logo comida asiatica" class="logo" loading="lazy">
+                    <img 
+                    src="./assets/img/redimensionades/logo_comida_Asiatica-small.avif"
+                    srcset="
+                      ./assets/img/redimensionades/logo_comida_Asiatica-small 150w,
+                      ./assets/img/redimensionades/logo_comida_Asiatica.avif 500w
+                    "
+                    sizes="(max-width: 600px) 120px, 300px"
+                    alt="Logo comida asiatica"
+                    class="logo"
+                    loading="lazy"
+                  />
+                  
                 </div>
              <h1 class="title">
                 <span class="main-title">Asian Food</span>
@@ -35,15 +46,30 @@
         </header>
         <main class="container-i"> 
             <section class="hero">
+                <img 
+                  class="hero-img"
+                  src="assets/img/menjarasiatic.webp"
+                  alt="Plats de cuina asiàtica"
+                  width="1600"
+                  height="900"
+                  decoding="async"
+                  loading="eager"
+                />
+                
                 <div class="clip-path-shape"></div>
+              
                 <div class="contenedor-i-textos">
-                    <h2>Asian Food</h2>
-                    <p>Descobreix la cuina asiàtica</p>
+                  <h2>Asian Food</h2>
+                  <p>Descobreix la cuina asiàtica</p>
                 </div>
-                <figure class="background-image">
-                    <figcaption><a href="https://www.freepik.es/foto-gratis/composicion-flat-lay-sushi-copyspace_4272797.htm#fromView=search&page=2&position=44&uuid=2977f3b0-4538-46d0-ab6c-f357b1aa54a8&query=Comida+Asiatica" target="_blank">Foto de Freepik</a></figcaption>
+              
+                <figure>
+                  <figcaption>
+                    <a href="https://www.freepik.es/foto-gratis/...">Foto de Freepik</a>
+                  </figcaption>
                 </figure>
-            </section>
+              </section>
+              
             <div class="bloc-newsletter-svg">
             <section class="newsletter">
                 <h2>Qui som Asian Food Blog</h2>

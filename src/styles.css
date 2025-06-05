@@ -4,14 +4,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   margin: 0;
   padding-top: 70px;
   font-family: "Alegreya Sans", serif;
   background-color: #eaeaea;
 }
-
 html, body {
   margin: 0;
   padding: 0;
@@ -21,7 +19,11 @@ html, body {
   font-family: "Alegreya Sans", serif;
   background-color: rgb(255, 255, 255);
 }
-
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('...') format('woff2');
+  font-display: swap;
+}
 main {
   min-height: calc(100vh - 70px);
   margin: 0;
@@ -30,7 +32,6 @@ main {
   flex-direction: column;
 }
 
-/*header*/
 header {
   display: flex;
   justify-content: space-between;
@@ -66,14 +67,14 @@ header {
 }
 
 .main-title {
-  color: rgb(123, 26, 26);
+  color: #f5f5f5;
   margin: 0;
   font-size: 1.2em;
   white-space: nowrap;
 }
 
 .sub-title {
-  color: beige;
+  color: #f5f5f5;
   margin: 0;
   font-size: 1.1em;
 }
@@ -104,35 +105,48 @@ header {
   color: rgb(123, 26, 26);
 }
 
-/*index*/
 .hero {
   margin-top: 0;
   padding: 0;
   height: 60vh;
   width: 100%;
-  object-fit: cover;
-  background-image: url(../assets/img/redimensionades/menjarasiatic.jpg);
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgb(242, 242, 230);
   position: relative;
   text-align: center;
-  top: 0;
   overflow: hidden;
 }
 
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.clip-path-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  background-image: url(../assets/img/redimensionades/ingreditens.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
 .contenedor-i-textos {
-  padding: 0;
+  position: relative;
+  z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
   color: rgb(123, 26, 26);
-  position: relative;
-  z-index:2;
   margin-top: 40px;
 }
 
@@ -141,7 +155,7 @@ header {
   font-weight: 700;
   margin-bottom: 250px;
   margin-left: 150px;
-  color:rgb(123, 26, 26);
+  color: rgb(123, 26, 26);
   text-shadow: 1px 1px 2px rgba(120, 97, 97, 0.3);
 }
 
@@ -153,49 +167,30 @@ header {
   margin-top: -50px;
   padding-bottom: 80px;
   text-shadow: 1px 1px 2px rgba(120, 97, 97, 0.3);
-  
 }
 
-
-.hero figure{
-font-size: 0.9rem;
-background-color: rgba(255, 255, 255, 0.7);
-position: absolute;
-bottom: 5%;
-left: 50%;
-width: auto;
-max-width: 60%;
-padding: 8px 9px;
-text-align: left;
-color: rgb(0, 0, 0);
-z-index: 1;
-white-space: nowrap;
-display: inline-block;
-margin-left: 30%;
+.hero figure {
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  max-width: 60%;
+  padding: 8px 9px;
+  color: black;
+  transform: translateX(-50%);
+  z-index: 2;
 }
+
 .hero figure a {
   text-decoration: none;
   color: black;
 }
+
 .hero figure a:hover {
   color: rgb(123, 26, 26);
 }
 
-.clip-path-shape {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60vh;
-  aspect-ratio: 2 / 1;
-  background-image: url(../assets/img/redimensionades/ingreditens.jpg);
-  clip-path: polygon(100% 0,0 0, 100% 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
-}
 /* Secció de subscripció */
 .newsletter {
   max-width: 600px;
@@ -223,7 +218,6 @@ margin-left: 30%;
   margin-bottom: 20px;
 }
 
-/* Formulari */
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -241,7 +235,6 @@ margin-left: 30%;
   text-align: center;
 }
 
-/* Casella de termes */
 .terms {
   font-size: 0.9rem;
   color: #333;
@@ -310,8 +303,6 @@ margin-left: 30%;
     transform: translateY(-10px);
   }
 }
-
-/* Animació de palillos */
 .palillo1 {
   animation: palillo-dreta 2s ease-in-out infinite;
   transform-origin: bottom center;
@@ -357,9 +348,6 @@ margin-left: 30%;
   padding: 20px;
   gap: 40px;
 }
-
-
-/* Main index*/
 .container-i {
   background-color: #eaeaea;
   margin: 0;
@@ -368,7 +356,6 @@ margin-left: 30%;
   min-height: 100vh;
 }
 
-/*enllaços*/
 .bloggers-container {
   gap: 40px;
   max-width: 1200px;
@@ -454,7 +441,6 @@ section p {
   margin-bottom: 10px;
 }
 
-/*categories*/
 .categories-section {
   margin: 40px auto;
   max-width: 1200px;
@@ -557,7 +543,6 @@ section p {
   outline: none;
 }
 
-/*detall*/
 .imatge-destacada {
   display: block;
   width: 100%;
@@ -575,15 +560,12 @@ section p {
 br {
   line-height: 1.6;
 }
-
 .section-sections {
   text-align: justify;
   padding: 10px;
   max-width: 900px;
   margin: 20px auto;
 }
-
-/* Estil per al títol */
 .detall-title {
   text-align: center;
   font-size: 2rem;
@@ -592,7 +574,6 @@ br {
   padding: 20px;
 }
 
-/* Estil per al text descriptiu general */
 .detall-description {
   font-size: 1rem;
   color: black;
@@ -600,8 +581,6 @@ br {
   padding: 20px;
   line-height: 1.6;
 }
-
-/* Contenidor per al text i la imatge */
 .detall-content {
   display: flex;
   flex-wrap: wrap;
@@ -616,7 +595,6 @@ br {
   object-fit: cover;
 }
 
-/* Estil per al text a l'esquerra */
 .detall-description-img {
   font-size: 1rem;
   line-height: 1.6;
@@ -632,9 +610,6 @@ br {
   margin-top: 30px;
 }
 
-
-
-/* Estil per als subtítols */
 .detall-subtitle {
   text-align: left;
   padding: 20px;
@@ -642,7 +617,6 @@ br {
   padding-top: 1px;
 }
 
-/* Estils per a la figura i la imatge */
 .detall-content figure {
   position: relative;
   margin: 0;
@@ -651,7 +625,6 @@ br {
   overflow: hidden;
 }
 
-/* Estil per al peu de foto (figcaption) */
 .detall-content figcaption {
   font-size: 0.9rem;
   background-color: rgba(255, 255, 255, 0.7);
@@ -669,7 +642,6 @@ br {
   margin-left: 30%;
 }
 
-/* Estil per als enllaços dins del figcaption */
 .detall-content figcaption a {
   text-decoration: none;
   color: black;
@@ -761,8 +733,6 @@ br {
   outline: none;
 }
 
-
-/*footer*/
 .footer {
   background-color: rgb(0, 0, 0);
   color: beige;
@@ -853,7 +823,6 @@ br {
   color: rgb(123, 26, 26);
 }
 
-/* Media Queries */
 @media (max-width: 1200px) {
   .menu ul {
     margin-left: 50px;
