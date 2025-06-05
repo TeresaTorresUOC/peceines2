@@ -953,7 +953,19 @@ br {
     max-width: 1200px;
     margin: 0 auto;
   }
-
+  .imatge-pato {
+    max-width: 800px;
+  }
+  .img-padthai {
+    max-width: 800px;
+  }
+  .img-japonesa {
+      max-width: 800px;
+    }
+  
+   .img-corea {
+     max-width: 800px;
+    }
   .newsletter {
     flex: 1;
     margin: 0;
