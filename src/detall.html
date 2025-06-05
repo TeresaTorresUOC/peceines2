@@ -17,7 +17,17 @@
         <header>
             <a href="../index.html" class="header-link"> 
                 <div class="logo">
-                    <img src="../assets/img/redimensionades/logo_comida_Asiatica.png" alt="Logo comida asiatica" class="logo" loading="lazy">
+                    <img 
+                    src="./assets/img/redimensionades/logo_comida_Asiatica-small.avif"
+                    srcset="
+                      ./assets/img/redimensionades/logo_comida_Asiatica-small 150w,
+                      ./assets/img/redimensionades/logo_comida_Asiatica.avif 500w
+                    "
+                    sizes="(max-width: 600px) 120px, 300px"
+                    alt="Logo comida asiatica"
+                    class="logo"
+                    loading="lazy"
+                  />
                 </div>
              <h1 class="title">
                 <span class="main-title">Asian Food</span>
@@ -35,29 +45,26 @@
         </header>
         <main class="container-i"> 
             <picture class="imatge-destacada">
+                
                 <source 
-                    srcset="
-                             ../assets/img/street_food2-sm.jpg 480w,
-                            ../assets/img/street_food2-md.jpg 768w,
-                            ../assets/img/street_food2-xl.jpg 1200w
-                                                                    "
-                    type="image/jpeg"
-                    sizes="(max-width: 768px) 100vw, 50vw">
-                <source 
+                  type="image/webp"
                   srcset="
-                    ../assets/img/street_food2-sm.webp 480w,
-                    ../assets/img/street_food2-md.webp 768w,
-                    ../assets/img/street_food2-xl.webp 1200w
+                    ../assets/img/street_food-400.webp 400w,
+                    ../assets/img/street_food-800.webp 800w
                   "
-                  sizes="(max-width: 768px) 100vw, 50vw">
-                  
+                  sizes="(max-width: 768px) 100vw, 800px"
+                />
+              
                 <img 
-                  src="../assets/img/redimensionades/street_food2-xl.webp" 
+                  src="../assets/img/street_food.webp" 
                   alt="Parada de menjar al carrer" 
                   class="imatge-destacada"
-                  loading="lazy">
+                  loading="lazy"
+                  decoding="async"
+                  style="width: 100%; height: auto;"
+                />
               </picture>
-                
+              
             <section id="xines" class="section-sections">
                 <h2 class="detall-title">Descobrint la riquesa de la gastronomia xinesa</h2>
                 <p class="detall-description">La cuina xinesa és una de les més antigues i variades del món, 

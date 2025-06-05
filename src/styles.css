@@ -651,11 +651,9 @@ br {
   color: rgb(123, 26, 26);
 }
 
+
 .video-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
@@ -667,8 +665,8 @@ br {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
 }
+
 
 .experience-form {
   background-color: #f4f4f4;
