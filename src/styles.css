@@ -609,6 +609,7 @@ br {
   margin-bottom: 5px;
   padding: 20px;
   line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .detall-content {
   display: flex;
