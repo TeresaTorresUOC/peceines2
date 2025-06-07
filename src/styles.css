@@ -436,6 +436,7 @@ section p {
   font-size: 1rem;
   margin-bottom: 15px;
   color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .blog a {
@@ -983,6 +984,9 @@ br {
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+  }
+  .imatge-destacada{
+    max-width: 800px;
   }
   .imatge-pato {
     max-width: 800px;
