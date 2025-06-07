@@ -10,6 +10,35 @@ body {
   font-family: "Alegreya Sans", serif;
   background-color: #eaeaea;
 }
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/AlegreyaSans-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/AlegreyaSans-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/AlegreyaSans-Italic.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/AlegreyaSans-BoldItalic.woff2') format('woff2');
+  font-display: swap;
+}
+
 html, body {
   margin: 0;
   padding: 0;
